@@ -1,0 +1,18 @@
+* text=auto
+
+*.c text eol=lf
+*.h text eol=lf
+*.S text eol=lf
+Makefile text eol=lf
+*.md text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+*.PNG binary
+*.png binary
+*.ttf binary
+*.a binary
+*.PBP binary
+*.zip binary

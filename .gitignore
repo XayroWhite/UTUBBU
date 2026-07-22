@@ -1,0 +1,43 @@
+# Local tooling and runtime data
+.agents/
+.runtime/
+cache-backup-*/
+Capture/
+Macro/
+
+# Build directories and intermediate PSP files
+build/
+*.o
+*.elf
+*.prx
+*.sfo
+*.log
+psp/EBOOT.PBP
+demo/**/EBOOT.PBP
+psp/catalog.url
+vendor/pmplayer-advance/cooleyesBridge/cooleyesBridge.S
+
+# Local media and diagnostic captures
+cache-*.png
+remotejoy-*.png
+*.mp4
+*.yvid
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Credentials: the application does not need these
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+cookies.txt
+
+# Keep the intentionally packaged release binary
+!release/**/EBOOT.PBP
