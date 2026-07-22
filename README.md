@@ -1,7 +1,4 @@
-<p align="center">
-  <img src="assets/PIC1.PNG" width="720" alt="UTUBBU for PSP">
-</p>
-
+https://github.com/user-attachments/assets/242c4b02-e8a4-40f0-9f93-bc6e107f539f
 <h1 align="center">UTUBBU</h1>
 
 <p align="center">
