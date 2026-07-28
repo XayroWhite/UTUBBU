@@ -1,3 +1,5 @@
+This method puts heavy use on the microSD card, which may shorten its lifespan. Use it at your own risk.
+
 <img width="1280" height="964" alt="photo_2026-07-22_03-24-51" src="https://github.com/user-attachments/assets/22a7ef73-919a-4be0-bc22-9b58cafd19de" />
 https://github.com/user-attachments/assets/242c4b02-e8a4-40f0-9f93-bc6e107f539f
 <h1 align="center">UTUBBU</h1>
