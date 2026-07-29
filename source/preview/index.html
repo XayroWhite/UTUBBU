@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>UTUBBU — Video per PSP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__start">
+      <button class="icon-button" id="menuButton" aria-label="Apri menu"><span class="hamburger"></span></button>
+      <a class="brand" href="#" aria-label="UTUBBU Home">
+        <span class="brand__mark"><span></span></span>
+        <span class="brand__name">UTUBBU</span><sup>IT</sup>
+      </a>
+    </div>
+
+    <form class="search" id="searchForm" role="search">
+      <div class="search__field">
+        <input id="search" type="search" placeholder="Cerca" autocomplete="off" aria-label="Cerca video">
+        <button class="search__clear" id="clearSearch" type="button" aria-label="Cancella ricerca">×</button>
+      </div>
+      <button class="search__submit" type="submit" aria-label="Cerca"><span class="search-icon"></span></button>
+    </form>
+
+    <div class="topbar__actions">
+      <button class="create-button"><span class="plus">＋</span><span>Crea</span></button>
+      <button class="icon-button notification" aria-label="Notifiche"><span class="bell">♢</span><i></i></button>
+      <button class="avatar" aria-label="Profilo">Y</button>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <nav aria-label="Navigazione principale">
+      <a class="nav-item active" href="#"><span class="nav-icon home-icon"></span><span>Home</span></a>
+      <a class="nav-item" href="#shorts"><span class="nav-icon shorts-icon">▶</span><span>Shorts</span></a>
+      <a class="nav-item" href="#subscriptions"><span class="nav-icon subs-icon">▣</span><span>Iscrizioni</span></a>
+      <hr>
+      <a class="nav-item nav-title" href="#you"><span>Tu</span><b>›</b></a>
+      <a class="nav-item" href="#history"><span class="nav-icon">◷</span><span>Cronologia</span></a>
+      <a class="nav-item" href="#downloads"><span class="nav-icon">⇩</span><span>Download</span></a>
+      <a class="nav-item" href="#liked"><span class="nav-icon">♡</span><span>Video piaciuti</span></a>
+      <hr>
+      <p class="sidebar__heading">Esplora</p>
+      <a class="nav-item" href="#music"><span class="nav-icon">♫</span><span>Musica</span></a>
+      <a class="nav-item" href="#gaming"><span class="nav-icon">♙</span><span>Gaming</span></a>
+      <a class="nav-item" href="#tech"><span class="nav-icon">⌘</span><span>Tecnologia</span></a>
+    </nav>
+    <div class="sidebar__footer">UTUBBU è un progetto homebrew indipendente e non è affiliato a YouTube.<br><br><b>© 2026 UTUBBU</b></div>
+  </aside>
+
+  <main class="content">
+    <div class="chips" id="chips" aria-label="Filtri video">
+      <button class="chip active" data-filter="tutti">Tutti</button>
+      <button class="chip" data-filter="psp">PSP</button>
+      <button class="chip" data-filter="gaming">Gaming</button>
+      <button class="chip" data-filter="musica">Musica</button>
+      <button class="chip" data-filter="tecnologia">Tecnologia</button>
+      <button class="chip" data-filter="homebrew">Homebrew</button>
+      <button class="chip" data-filter="recenti">Caricamenti recenti</button>
+    </div>
+
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero__copy">
+        <span class="eyebrow">UTUBBU ORIGINAL</span>
+        <h1 id="heroTitle">Il grande schermo,<br>nel palmo della mano.</h1>
+        <p>Scopri video ottimizzati per PSP, pronti da scaricare e guardare anche offline.</p>
+        <button class="hero__button" data-play="psp-hardware-test"><span>▶</span> Guarda ora</button>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="glow"></div>
+        <div class="console"><div class="console__screen"><span>UTUBBU</span><i>▶</i></div><b></b><b></b></div>
+      </div>
+    </section>
+
+    <div class="section-heading">
+      <div><h2>Consigliati per te</h2><p>Video convertiti e pronti per la tua PSP</p></div>
+      <button class="hardware-toggle" id="hardwareToggle"><span></span> Stato PSP</button>
+    </div>
+
+    <section class="video-grid" id="results" aria-live="polite"></section>
+  </main>
+
+  <dialog class="player-dialog" id="playerDialog">
+    <div class="player-shell">
+      <button class="player-close" id="playerClose" aria-label="Chiudi">×</button>
+      <video id="player" playsinline controls preload="metadata">
+        <source src="media/psp-test-480p.mp4" type="video/mp4">
+      </video>
+      <div class="player-info">
+        <h2 id="playerTitle">Test video PSP 443 MHz</h2>
+        <p id="playerMeta">UTUBBU Labs · Video locale ottimizzato</p>
+      </div>
+    </div>
+  </dialog>
+
+  <aside class="hardware-panel" id="hardwarePanel" aria-label="Stato hardware">
+    <div class="hardware-panel__head"><div><span class="live-dot"></span> PSP CONNESSA</div><button id="hardwareClose" aria-label="Chiudi">×</button></div>
+    <h2>Profilo hardware</h2>
+    <p>Simula il budget prestazionale del dispositivo.</p>
+    <label>CPU <strong><output id="screenCpu">443</output> MHz</strong><input id="cpu" type="range" min="20" max="600" value="443"></label>
+    <label>BUS <strong><output id="screenBus">222</output> MHz</strong><input id="bus" type="range" min="10" max="300" value="222"></label>
+    <div class="meter"><span id="load"></span></div>
+    <p id="status" class="hardware-status"></p>
+    <small>È una stima browser, non una misurazione reale della PSP.</small>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

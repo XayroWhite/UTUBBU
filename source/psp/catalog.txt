@@ -1,0 +1,2 @@
+# titolo|URL sorgente oppure local:|nome file locale
+Test hardware PSP 443 MHz|local:psp-test-480p.yvid|psp-test-480p.yvid
