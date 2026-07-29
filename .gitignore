@@ -12,10 +12,10 @@ build/
 *.prx
 *.sfo
 *.log
-psp/EBOOT.PBP
+source/psp/EBOOT.PBP
 demo/**/EBOOT.PBP
-psp/catalog.url
-vendor/pmplayer-advance/cooleyesBridge/cooleyesBridge.S
+source/psp/catalog.url
+source/vendor/pmplayer-advance/cooleyesBridge/cooleyesBridge.S
 
 # Local media and diagnostic captures
 cache-*.png
