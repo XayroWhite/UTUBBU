@@ -5,6 +5,12 @@ https://github.com/user-attachments/assets/242c4b02-e8a4-40f0-9f93-bc6e107f539f
 <h1 align="center">UTUBBU</h1>
 
 <p align="center">
+  <img src="source/assets/PIC1.PNG" width="720" alt="UTUBBU for PSP">
+</p>
+
+<h1 align="center">UTUBBU</h1>
+
+<p align="center">
   YouTube on a 2004 PSP, directly over Wi-Fi.<br>
   No computer, server, account, or API key required.
 </p>
@@ -112,13 +118,13 @@ diagnostic files.
 ## Building
 
 The build requires PSPSDK, curl, mbedTLS, the PSP FFmpeg libraries included in
-`vendor.rar`, and MPEG stubs for firmware 3.71 or later.
+`source/vendor.rar`, and MPEG stubs for firmware 3.71 or later.
 
-Extract `vendor.rar` in the project root before building. This creates the
-`vendor/` directory.
+Extract `source/vendor.rar` inside `source/` before building. This creates the
+`source/vendor/` directory.
 
 ```sh
-cd psp
+cd source/psp
 make
 ```
 
@@ -128,17 +134,18 @@ With modern libraries and separate shims:
 make PSP_MODERN_LIB="path/to/pspdev" PSP_SHIM_LIB="path/to/shim"
 ```
 
-The resulting executable is generated at `psp/EBOOT.PBP`.
+The resulting executable is generated at `source/psp/EBOOT.PBP`.
 
 ## Project structure
 
 ```text
-assets/     XMB artwork and fonts
-preview/    Web preview of the interface
-psp/        PSP application source code
-release/    Memory Stick-ready package
-tools/      Development utilities
-vendor.rar  Third-party dependencies and source code (extract before building)
+source/     Complete source package, assets and development utilities
+  assets/   XMB artwork and fonts
+  preview/  Web preview of the interface
+  psp/      PSP application source code
+  tools/    Development utilities
+  vendor.rar Third-party dependencies and source code (extract before building)
+release/    Memory Stick-ready binary package
 ```
 
 ## Project status
@@ -157,6 +164,10 @@ The player contains work derived from PMPlayer Advance and OpenTube PSP. The
 Roboto font is distributed under the SIL Open Font License 1.1.
 
 ---
+
+<p align="center">
+  Built to keep the PSP alive.
+</p>
 
 <p align="center">
   Built to keep the PSP alive.
