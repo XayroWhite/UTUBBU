@@ -167,7 +167,3 @@ Roboto font is distributed under the SIL Open Font License 1.1.
 <p align="center">
   Built to keep the PSP alive.
 </p>
-
-<p align="center">
-  Built to keep the PSP alive.
-</p>
